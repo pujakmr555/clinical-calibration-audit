@@ -1,0 +1,14 @@
+name: mimic_main
+dataset:
+  kind: mimic
+  params:
+    data_path: data/mimic_cohort.parquet
+seeds: [0, 1, 2]
+n_boot: 300
+models:
+  - {name: lr}
+  - {name: xgb, params: {n_estimators: 400, max_depth: 5, learning_rate: 0.05}}
+  - {name: mlp}
+recalibration: [none, temperature, platt, isotonic]
+coverages: [0.80, 0.90, 0.95]
+expert_accuracies: [0.75, 0.85, 0.95]

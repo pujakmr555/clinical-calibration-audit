@@ -1,0 +1,10 @@
+name: smoke
+dataset:
+  kind: synthetic
+  params: {n: 8000, seed: 0}
+seeds: [0, 1, 2]
+n_boot: 200
+models:
+  - {name: lr}
+  - {name: xgb, params: {n_estimators: 150}}
+recalibration: [none, temperature, platt, isotonic]

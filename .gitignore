@@ -1,0 +1,46 @@
+# Data — NEVER commit MIMIC or any patient-level data
+data/
+*.parquet
+*.csv.gz
+
+# Predictions (contain patient-level probabilities)
+results/preds/
+*.npy
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# macOS
+.DS_Store
+__MACOSX/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# MLflow
+mlruns/
+
+# Logs
+*.log
+experiment_log.txt
+tabpfn_log.txt
+
+# Temporary
+*.tmp
+*.bak
